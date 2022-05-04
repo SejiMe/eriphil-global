@@ -1,0 +1,37 @@
+.Footer {
+    width: 100%;
+    background-color: rgba($color: #2b2a2a, $alpha: 0.9);
+    color: white;
+}
+
+
+.upperF{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    p {
+        height: 50px;
+        width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.bottomF{
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    background-color: rgba($color: #2b2a2a, $alpha: 1);
+    height: 80px;
+    width: 100%;
+
+    nav{
+        ul{
+            gap: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

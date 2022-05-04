@@ -1,0 +1,26 @@
+@import 'variables';
+
+.App {
+    font-family: $primaryFont;
+    //background-color: rgb(74, 74, 74);
+
+
+    .img-carousel-container {
+
+        img{
+            height: 400px;
+            width: 100%;
+            object-fit: cover!important;
+            object-position: center!important;
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+
+    a{
+        color: #5dcbf3;
+        text-decoration: none;
+    }
+}
