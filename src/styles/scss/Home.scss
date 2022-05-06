@@ -1,19 +1,49 @@
 @import 'variables';
 
-.Home {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100%;
-    width: 100%;
-  
+
+.Home{
+    main {
         
-section{
-    span {
-            a{
-                color: black;
-            }
-        }
     }
+}
+
+
+
+
+// .Home {
+//     height: 220vh;
+//     width: 100vw;
+//     section{
+//     span {
+//             a{
+//                 color: #4c94ff;
+//             }
+//         }
+//     }
+//     .home-container{
+//         display: grid;
+//         grid-template-columns: 100;
+//         place-content: center;
+        
+//     }
+//     main {
+//         height: 80%;
+//         width: 70%;
+//         margin-top: 10px;
+//         padding: 20px;
+//         right: 50%;
+//         transform: translateX(20%);
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         border-left: 0.5px solid rgba($color: #000000, $alpha: 0.4);
+//         border-right: 0.5px solid rgba($color: #000000, $alpha: 0.4);
+        
+//     }
+// }
+
+@media screen {
     
 }
 

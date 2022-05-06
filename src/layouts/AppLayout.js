@@ -4,11 +4,11 @@ import Header from '../components/Header'
 
 const AppLayout = ({children}) => {
     return (
-        <div className=''>
+        <>
             <Header />
             {children}
             <Footer />
-        </div>
+        </>
     )
 }
 

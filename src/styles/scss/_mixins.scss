@@ -1,0 +1,36 @@
+@import 'variables';
+
+@mixin breakpoints($media) {
+    @if $media == mobileP  {
+        @media only screen and (min-width: 320px) and (orientation: portrait) { @content; }    
+    }
+    @else if $media == iPad  {
+        @media only screen and (min-width) { @content; }
+    }
+    
+}
+
+@mixin articles($h2FontSize, $h2fontWeight) {
+    h2 {
+        font-size: $h2FontSize;
+        font-weight: $h2fontWeight;
+    }
+
+    p{
+        word-wrap: break-word;
+    }
+}
+
+@mixin forBtns($h: 40px,$w: 50px, $borderR:30px) {
+        height: $h;
+        width: $w;
+        border-radius: $borderR;
+}
+
+@mixin centerFlexCol($g) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $g;
+}

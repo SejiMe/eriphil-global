@@ -3,16 +3,18 @@
 .App {
     font-family: $primaryFont;
     //background-color: rgb(74, 74, 74);
-
-
     .img-carousel-container {
-
         img{
-            height: 400px;
+            height: 600px;
             width: 100%;
             object-fit: cover!important;
             object-position: center!important;
         }
+    }
+
+    ul, dl, ol {
+        margin-bottom: 0px!important;
+        padding-left: 0px!important ;
     }
 
     li{
