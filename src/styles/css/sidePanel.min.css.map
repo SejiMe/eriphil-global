@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"sidePanel.min.css"}
+{"version":3,"sources":["../scss/_variables.scss","../scss/sidePanel.scss","../scss/_mixins.scss"],"names":[],"mappings":"AAAQ,sHAAA,CCER,WACI,UAAA,CACA,YAAA,CACA,wBAAA,CACA,UAAA,CACA,gBAAA,CCHI,qEDFR,WAOQ,yBAAA,CAAA,CCCA,0CDRR,WAUQ,YAAA,CACA,eAAA,CAAA","file":"sidePanel.min.css"}

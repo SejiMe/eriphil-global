@@ -1,0 +1,19 @@
+@import 'mixins';
+@import 'variables';
+
+.Navlink{
+    display: flex;
+    gap: 10px;
+    
+    &>a{
+        font-size: 1.4em;
+        color: $divisibleFontColor;
+        
+        
+    }
+
+    .active{
+        color: black;
+    }
+    
+}

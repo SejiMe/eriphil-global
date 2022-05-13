@@ -1,35 +1,44 @@
 @import 'variables';
 @import 'mixins';
+@import 'navlinks';
+
 
 .Header{
     color: white;
     position: fixed;
     z-index: 3;
+    
     .upperH{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        background-color: rgba($color: $backgroundColor, $alpha: 0.7);
+        background-color: rgba($color: $backgroundCompanyTheme, $alpha: 0.2);
         height: 100px;
         width: 100vw;
         z-index: 3;
+        transition: background-color 400ms ease-in-out;
+        
         &>span{
-            margin-left: 10%;
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 5%;
             width: 140px;
-            
-        }
-
-        .mobile-btn-container{
-            margin-right: 10%;
-            
-            &>button{
-                @include forBtns(70px, 70px, 10px);
-                border: none;
-                background-color: rgba($color: #000000, $alpha: 0.1);
-            }
         }
     }
 
+    .upperH>span, button>svg{
+        color: $divisibleFontColor;
+        transition: color 100ms linear;
+    }
+
+    .mobile-btn-container{
+            margin-right: 10%;
+            &>button{
+                @include forBtns(50px, 50px, 10px);
+                border: none;
+                background-color: rgba($color: #000000, $alpha: 0);
+            }
+        }
     .bottomH{
         display: none;
     }
@@ -37,27 +46,107 @@
     .btn-container {
         display: none;
         &>button{
+            color: $divisibleFontColor;
+            margin-left: 10px;
+            border-radius: 10px;
+            width: 80px;
+            height: 50px;
+            border: none;
+            background-color: rgba($color: $backgroundCompanyTheme, $alpha: 1.0) ;
             visibility: hidden;
         }
     }
 
+    
 
+    @include breakpoints(mobileL){
+        
+        .mobile-l-container {
+            display: flex;
+            font-size: 14px;
+            margin-right: 3%;
+            &>section {
+                display: flex;
+                gap: 10px;
+            }
+
+            &>ul {
+                margin-right: 10px;    
+                display: flex;
+                gap: 12px;
+            }
+        }
+        .bottomH{
+            display: flex;
+            width: 100%;
+            &>nav{
+                display: none;
+            }
+        }
+
+    }
     
     @include breakpoints(mobileP) {
-        
-            .upperH {
-                .btn-container > button {
-                    
-                }
+        .mobile-l-container {
+            display: none;
+        }
+        .upperH {
+            
+            .btn-container > button {
+                
             }
-            .bottomH {
-                .btn-container > button{
-                    
-                }
+        }
+        .bottomH {
+            .btn-container > button{
+                
             }
-        
+        } 
     }
+
+    @include breakpoints(mobileL){
+        .mobile-btn-container{
+            display: none;
+        }
+    }
+
+    @include breakpoints(tabletP){
+        .mobile-btn-container{
+            display: none;
+        }
+        .btn-container{
+            display: flex;
+            margin-right: 10%;
+            >button{
+                visibility: visible;
+            }
+        }
+
+        .bottomH{
+            display: flex;
+            height: 90px;
+            .btn-container{
+                display: none;
+            }
+            ul{
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    @include breakpoints(tabletL){
+        .mobile-btn-container{
+            display: none;
+        }
+        
+        .btn-container{
+            margin-right: 2%;
+        }
+    }
+    
 }
+
 
 .mobile-menu{
     position: absolute;
@@ -66,7 +155,7 @@
     padding-top: 10px;
     top: 0;
     bottom: 0;
-    right: 0;
+    right: 50%;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -74,25 +163,28 @@
     opacity: 1;
     transition: visibility 0.6s ease-in 400ms, opacity 200ms;
     
+    
+
     .mobile-menu-btn {
         @include centerFlexCol(20px);
         width: 100vw;
         height: 180px;
-        &>a{
+        
+        a{
             @include centerFlexCol(0px);
             height: 60px;
             width: 80%;
             outline: #32a2ce solid 2px;
             border: none;
             border-radius: 10px;
-            background-color: rgba($color: #000000, $alpha: 0.3);
+            background-color: rgba($color: #000000, $alpha: 0);
             &:hover, :focus{
                 background-color: rgba($color: #163337, $alpha: 0.6);
                 color: white;
-            }
-        }
+            }     
+        }   
     }
-
+    
     ul{
         @include centerFlexCol(0px);
         width: 100%;
@@ -111,31 +203,42 @@
             }
         }
     }
-
-    .menu-close-btn{
-        @include forBtns(60px, 80px, 0px);
-        border: none;
-        background-color: $backgroundColor;
-        
-        &:hover,:focus{
-            background-color: #32a2ce;
-            &>svg{
-                color: black;
-            }
-        }
-    }
 }
+
 
 .hide {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.6s ease-out 300ms, opacity 400ms;
+    transition: visibility 0.6s ease-out 300ms, opacity 700ms;
 }
 
 .visible-header{
     .upperH{
-        background-color: rgba($color: $backgroundColor, $alpha: 1.0);
+        background-color: rgba($color: $backgroundCompanyTheme, $alpha: 1.0);
+        &>span , button>svg, .Navlink>a{
+            color: rgb(243, 255, 253);
+        }
+        .Navlink>.active{
+            color: #0f1314;
+        }
+
+        @include breakpoints(tabletP){
+            .btn-container {
+            
+                &>button{
+                    color: white;
+                    margin-left: 10px;
+                    border-radius: 10px;
+                    width: 80px;
+                    height: 50px;
+                    border: solid black 1.5px;
+                    background-color: rgba($color: $backgroundCompanyTheme, $alpha: 1.0) ;
+                }
+            }
+        }
     }
+
+    
 }
 
 

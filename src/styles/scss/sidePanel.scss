@@ -1,4 +1,17 @@
+@import 'mixins';
 
 .sidepanel {
-    
+    width: 100%;
+    height: 200px;
+    background-color: rgba($color: #0070ac, $alpha: 1);
+    color: white;
+    margin-bottom: 2%;
+    @include breakpoints(mobileP) {
+        border-top: #000000 solid 2px;
+    }
+    @include breakpoints(tabletP){
+        height: 100vh;
+        margin-bottom: 0;
+    }
+
 }

@@ -1,7 +1,69 @@
 @import 'variables';
+@import 'mixins';
 
 .Footer{
-    bottom: 0;
     color: black;
-    background-color: $backgroundColor;
+    background-color: $backgroundCompanyTheme;
+    font-size: 14px;
+    p{
+        margin-bottom: 0px!important;
+    }
+    
+    .bottomF nav a{
+        color: black;
+    }
+    
+    .credits-tag{
+        text-align: center;
+        color: white;
+        background-color: #2f3f47;
+    }
+    
+    
+    a{
+        color: white;
+    }
+    @include breakpoints(mobileP){
+        .bottomF{
+            nav{
+                margin-left: 5%;
+                ul{
+                    display: flex;
+                    gap: 20px;
+                    
+                    a{
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        .upperF{
+            @include centerFlexCol(0px);
+            text-align: center;
+            margin-bottom: 10px;
+            p{
+                width: 80%;
+            }
+            a{
+                color: black;
+                font-size: 15px;
+                font-weight: 800;
+            }
+        }
+
+    }
+
+    @include breakpoints(tabletL){
+        .bottomF{
+            ul{
+                display: flex;
+                gap: 10px;
+                justify-content: end;
+                margin-right: 5%;
+            }
+        }
+    }
 }

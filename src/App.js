@@ -12,7 +12,11 @@ function App() {
         <AppLayout>
           <Routes>
             <Route path='/' element={<Home />}/>
+            <Route path='/jobs' element={<Applicants />}/>
             <Route path='/applicants' element={<Applicants />}/>
+            <Route path='/clients' element={<Applicants />}/>
+            <Route path='/about' element={<Applicants />}/>
+            <Route path='/contact' element={<Applicants />}/>
           </Routes>
         </AppLayout>
       </Router>

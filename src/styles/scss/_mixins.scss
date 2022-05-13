@@ -4,9 +4,22 @@
     @if $media == mobileP  {
         @media only screen and (min-width: 320px) and (orientation: portrait) { @content; }    
     }
-    @else if $media == iPad  {
-        @media only screen and (min-width) { @content; }
+    @else if $media == mobileL {
+        @media screen and (min-width: 720px) and(orientation: landscape){  @content; }
     }
+    @else if $media == tabletP  {
+        @media only screen and (min-width: 810px) { @content; }
+    }
+    @else if $media == tabletL  {
+        @media only screen and (min-width: 1080px) { @content; }
+    }
+    @else if $media == Laptop  {
+        @media only screen and (min-width: 1080px) { @content; }
+    }
+    @else if $media == Desktop  {
+        @media only screen and (min-width: 1080px) and (min-height: 810px) { @content; }
+    }
+    
     
 }
 
