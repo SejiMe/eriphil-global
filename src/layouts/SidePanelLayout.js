@@ -4,7 +4,10 @@ import '../styles/css/sidePanel.min.css'
 const SidePanelLayOut = ({ children }) => {
     return (
         <div className='sidepanel'>
-            {children}
+            <div className='container-sidepanel'>
+                {children}
+            </div>
+
         </div>
     )
 }

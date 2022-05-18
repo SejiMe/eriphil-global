@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'variables';
 
+/* Styling the Navlink class. */
 .Navlink{
     display: flex;
     gap: 10px;
@@ -15,5 +16,4 @@
     .active{
         color: black;
     }
-    
 }

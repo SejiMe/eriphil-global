@@ -13,14 +13,12 @@
     @else if $media == tabletL  {
         @media only screen and (min-width: 1080px) { @content; }
     }
+    @else if $media == LaptopWithMdpi  {
+        @media only screen and (min-width: 1280px) { @content; }
+    }
     @else if $media == Laptop  {
-        @media only screen and (min-width: 1080px) { @content; }
+        @media only screen and (min-width: 1920px) { @content; }
     }
-    @else if $media == Desktop  {
-        @media only screen and (min-width: 1080px) and (min-height: 810px) { @content; }
-    }
-    
-    
 }
 
 @mixin articles($h2FontSize, $h2fontWeight) {
@@ -32,6 +30,14 @@
     p{
         word-wrap: break-word;
     }
+}
+
+
+@mixin truncateArticle($clamp){
+    overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: $clamp;
 }
 
 @mixin forBtns($h: 40px,$w: 50px, $borderR:30px) {
